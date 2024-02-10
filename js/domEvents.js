@@ -4,7 +4,18 @@ makeBlue.addEventListener("click", function () {
 });
 
 const makePurple = document.getElementById("make-purple");
-makePurple.onclick = makePu();
+makePurple.onclick = makePu;
 function makePu() {
-  document.body.backgroundColor = "purple";
+  document.body.style.backgroundColor = "purple";
 }
+
+// MAKE PICK
+const cyanButton = document.getElementById("make-cyan");
+cyanButton.addEventListener("click", function makecyan() {
+  document.body.style.backgroundColor = "cyan";
+});
+
+const makeGreen = document.getElementById("make-green");
+makeGreen.addEventListener("click", function makeGreen() {
+  document.body.style.backgroundColor = "green";
+});
