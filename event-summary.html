@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Dom Summary</title>
+  </head>
+  <body>
+    <h1>Final DOM Event Listener</h1>
+
+    <br />
+    <h4 id="input-text-display">Default Input Text</h4>
+    <input id="input-field" type="text" />
+    <button id="btn-update">Update</button>
+    <br />
+
+    <h3 id="handler-status">Default Text</h3>
+    <button onclick="handleOnclick()">Add Onclick Function</button>
+
+    <script>
+      function handleOnclick() {
+        const handlerStatus = document.getElementById("handler-status");
+        handlerStatus.innerText =
+          "handled by function attached by onClick attribute";
+      }
+
+      //   another method
+      document
+        .getElementById("btn-update")
+        .addEventListener("click", function () {
+          const inputField = document.getElementById("input-field");
+          const inputText = inputField.value;
+          const paragraph = document.getElementById("input-text-display");
+          paragraph.innerText = inputText;
+          inputField.value = "";
+        });
+    </script>
+  </body>
+</html>
